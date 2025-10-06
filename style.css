@@ -1,0 +1,86 @@
+@font-face {
+  font-family: Minecraft;
+  src: url('./fonts/minecraft.otf');
+}
+@font-face {
+  font-family: MinecraftBold;
+  src: url('./fonts/minecraft-bold.otf');
+}
+*{
+  margin: 10px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  color: #FFFFFF;
+  background-color: #181818;
+  }
+h1 {
+  font-size: 64px;
+  font-family: 'MinecraftBold';
+}
+h2 {
+  font-size: 32px;
+  margin-top: -10px;
+  color: #86cf86;
+  font-family: 'Minecraft';
+}
+label {
+  font-size: 24px;
+  color: #FFFFFF;
+  font-family: 'Minecraft';
+}
+textarea {
+  font-size: 24px;
+  padding: 0.2em;
+  color: #FFFFFF;
+  background-color: #202020;
+  border: 1px solid #454545;
+  font-family: 'Minecraft';
+  resize: none;
+  width: 200px;
+  height: 36px;
+}
+select {
+  font-size: 24px;
+  padding: 0.2em;
+  color: #FFFFFF;
+  background-color: #202020;
+  border: 1px solid #454545;
+  cursor: pointer;
+  font-family: 'Minecraft';
+}
+button {
+  font-size: 24px;
+  padding: 0.5em;
+  color: #FFFFFF;
+  background-color: #199619;
+  border: 2px solid #0faf0f;
+  cursor: pointer;
+  font-family: 'MinecraftBold';
+  text-shadow: 0 2.5px 0 #053805;
+  box-shadow: 0 5px 0 #053805, 0 7px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease-in-out;
+}
+button:hover {
+  font-size: 24px;
+  color: #EEEEEE;
+  background-color: #0e570e;
+  border: 2px solid #0a6b0a;
+  cursor: pointer;
+  font-family: 'MinecraftBold';
+}
+button:active {
+  box-shadow: 0 0 0 #053805, 0 0 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease-in-out;
+  transform: translateY(5px);
+}
+.output {
+  padding:5px;
+  width: 80%;
+  color: #FFFFFF;
+  background-color: #202020;
+  border: 1px solid #454545;
+  margin-bottom: 20px;
+  visibility: hidden;
+}
