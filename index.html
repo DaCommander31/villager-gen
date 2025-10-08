@@ -11,51 +11,57 @@
     <h2>by DaCommander31</h2>
     <div class="input",id="input">
       <br />
-      <label for="type">Type:</label>
-      <select id="type" name="type">
-        <option value="plains">Plains</option>
-        <option value="desert">Desert</option>
-        <option value="savanna">Savanna</option>
-        <option value="taiga">Taiga</option>
-        <option value="snowy">Snowy</option>
-        <option value="jungle">Jungle</option>
-        <option value="swamp">Swamp</option>
-      </select>
+      <div class="data" id="coords_data">
+        <h3>Spawn Coordinates</h3>
+        <input id="coords" name="coords" type="text" value="~ ~ ~" />
+      </div>
+      <div class="data" id="villager_data">
+        <h3>Villager Data</h3>
+        <br />
+        <label for="type">Type:</label>
+        <select id="type" name="type" onclick="playClick()">
+          <option value="plains">Plains</option>
+          <option value="desert">Desert</option>
+          <option value="savanna">Savanna</option>
+          <option value="taiga">Taiga</option>
+          <option value="snowy">Snowy</option>
+          <option value="jungle">Jungle</option>
+          <option value="swamp">Swamp</option>
+        </select>
+        <br />
+        <label for="profession">Profession:</label>
+        <select id="profession" name="profession" onclick="playClick()">
+          <option value="none">None</option>
+          <option value="armorer">Armorer</option>
+          <option value="butcher">Butcher</option>
+          <option value="cartographer">Cartographer</option>
+          <option value="cleric">Cleric</option>
+          <option value="farmer">Farmer</option>
+          <option value="fisherman">Fisherman</option>
+          <option value="fletcher">Fletcher</option>
+          <option value="leatherworker">Leatherworker</option>
+          <option value="librarian">Librarian</option>
+          <option value="mason">Mason</option>
+          <option value="nitwit">Nitwit</option>
+          <option value="shepherd">Shepherd</option>
+          <option value="toolsmith">Toolsmith</option>
+          <option value="weaponsmith">Weaponsmith</option>
+        </select>
+        <br />
+        <label for="level">Level:</label>
+        <input id="level" name="level" min=1 max=5 type="number" value="1" />
+      </div>
+      <div class="data",id="additional_data">
+        <h3>Additional Data</h3>
+        <label for="no_ai">No AI:</label>
+        <input type="checkbox" id="no_ai" name="no_ai" onclick="playClick()" />
+        <br />
+        <label for="age">Age:</label>
+        <input id="age" name="age" min=-999999999 max=999999999 type="number" value="0" />
+      </div>
       <br />
-      <label for="profession">Profession:</label>
-      <select id="profession" name="profession">
-        <option value="none">None</option>
-        <option value="armorer">Armorer</option>
-        <option value="butcher">Butcher</option>
-        <option value="cartographer">Cartographer</option>
-        <option value="cleric">Cleric</option>
-        <option value="farmer">Farmer</option>
-        <option value="fisherman">Fisherman</option>
-        <option value="fletcher">Fletcher</option>
-        <option value="leatherworker">Leatherworker</option>
-        <option value="librarian">Librarian</option>
-        <option value="mason">Mason</option>
-        <option value="nitwit">Nitwit</option>
-        <option value="shepherd">Shepherd</option>
-        <option value="toolsmith">Toolsmith</option>
-        <option value="weaponsmith">Weaponsmith</option>
-      </select>
-      <br />
-      <label for="age">Age:</label>
-      <textarea id="age" name="age">0</textarea>
-      <br />
-    </div>
     <button onclick="generate()">GENERATE</button>
     <div class="output" id="output"></div>
-
-    <script>
-      function generate() {
-        const audio = new Audio();
-        audio.src = "./sounds/press.mp3";
-        audio.play();
-
-        document.getElementById("output").style.visibility = 'visible';
-      }
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
